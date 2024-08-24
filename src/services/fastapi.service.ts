@@ -50,7 +50,7 @@ export class GenAI {
 
       return new Promise<string>((resolve, reject) => {
         response.data.on("end", () => {
-          // console.log("Response ended");
+          console.log("Response ended");
           // console.log("Raw Response Data:", responseData); // Log the raw response data
 
           // Split the raw response data into chunks based on newline and process each chunk
@@ -82,7 +82,7 @@ export class GenAI {
             }
           }
 
-          console.log("Final Response Text:", responseText);
+          // console.log("Final Response Text:", responseText);
           resolve(responseText || "No meaningful response data found.");
         });
 
